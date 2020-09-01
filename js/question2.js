@@ -7,17 +7,17 @@ async function gamesApi() {
         const result = await response.json();
 
         const gamesResult = result.results
-
+        container.innerHTML="";
 
         console.log(result);
 
         for (let i = 0; i < gamesResult.length; i++) {
             container.innerHTML += `
                             <div class="games"> 
-                              <h4>${gamesResult[i].name}</h4>
                               <img src= "${gamesResult[i].background_image}" alt= "${gamesResult[i].name}"/>
-                              <p>Released: ${gamesResult[i].released}</p>
-                             <p> Rating ${gamesResult[i].rating} of ${gamesResult[i].rating_top}</p>
+                              <h4>${gamesResult[i].name}</h4>
+                             <p>Rating ${gamesResult[i].rating}/${gamesResult[i].rating_top}</p>
+                             <p>Released: ${gamesResult[i].released}</p>
                              </div>`
 
         }
