@@ -29,17 +29,18 @@ p {
     gap: 10px;
     
 }
-
+/* Cards */
 .games {
     display: flex;
     flex-direction: column;
-    background-color: #E0E0E0;
+    background-color: #FAFAFC;
     color: #000;
     width: 350px;
     height: 400px;
     padding: 10px;
     opacity: 0.9;
     border-radius: 1em;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
     text-decoration: none;
 }
 
@@ -55,6 +56,13 @@ p {
 }
 
 /* Question 3 css */
+
+nav a {
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+
 .container {
     max-width: 1000px;
     padding: 10px;
