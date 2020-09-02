@@ -11,16 +11,15 @@ async function gamesApi() {
 
         console.log(result);
 
-        for (let i = 0; i < gamesResult.length; i++) {
+        gamesResult.forEach(function(game) {
             container.innerHTML += `
-                            <div class="games"> 
-                              <img src= "${gamesResult[i].background_image}" alt= "${gamesResult[i].name}"/>
-                              <h4>${gamesResult[i].name}</h4>
-                             <p>Rating ${gamesResult[i].rating}/${gamesResult[i].rating_top}</p>
-                             <p>Released: ${gamesResult[i].released}</p>
-                             </div>`
-
-        }
+                            <a href="question3.html?id=${game.id}" class="games"> 
+                              <img src= "${game.background_image}" alt= "${game.name}"/>
+                              <h4>${game.name}</h4>
+                             <p>Rating ${game.rating}/${game.rating_top}</p>
+                             <p>Released: ${game.released}</p>
+                             </a>`
+        });
 
     } catch (error) {
         console.log(error);
